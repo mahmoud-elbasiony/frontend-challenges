@@ -1,0 +1,127 @@
+:root{
+    font-family: sans-serif;
+}
+body{
+    padding: 15px 100px;
+    background-color: aliceblue;
+}
+
+
+.container{
+    display: grid;
+    gap:20px;
+
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    /* width: 100%; */
+    border-radius: 15px;
+}
+.card1{
+    background-color: rgb(115, 63, 200);
+    position: relative;
+}
+.card1 svg{
+    position: absolute;
+    z-index: 0;
+    scale: .5;
+    top: 5px;
+    right: 5px;
+    opacity: 40%;
+}
+.card2{
+    background-color: rgb(44, 51, 64);
+}
+.card3{
+    background-color: white;
+}
+.card4{
+    background-color: rgb(24, 32, 45);
+}
+.card5{
+    background-color: white;
+}
+
+
+.profile{
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    z-index: 2;
+
+}
+
+p{
+    margin: 0px;
+}
+.card1,.card2,.card4{
+    color: white;
+}
+.profile :last-child :last-child{
+    color: rgb(190, 190, 190);
+}
+
+
+.profile img{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.comment-header{
+    font-size: 22px;
+    font-weight: bold;
+    z-index: 2;
+
+}
+.comment-desc{
+    color: rgb(190, 190, 190);
+    z-index: 2;
+
+}
+
+@media (min-width:400px) {
+    
+    body{
+        padding: 15px 15px;
+    }
+    
+    
+}
+
+@media (min-width:767px) {
+    
+    body{
+        padding: 15px 100px;
+    }
+    .container{
+        
+        grid-template-areas: 
+    "card1 card1 card1 card2 card5"
+    "card3 card4 card4 card4 card5";
+    }
+    .card1{
+        grid-area: card1;
+    }
+    .card2{
+        grid-area: card2;
+    }
+    .card3{
+        grid-area: card3;
+    }
+    .card4{
+        grid-area: card4;
+    }
+    .card5{
+        grid-area: card5;
+    }
+
+    
+}
