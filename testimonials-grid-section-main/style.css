@@ -2,13 +2,15 @@
     font-family: sans-serif;
 }
 body{
-    padding: 15px 100px;
+    padding: 30px auto;
     background-color: aliceblue;
 }
 
 
 .container{
+    padding-top: 30px;
     display: grid;
+    margin: 0 auto;
     gap:20px;
 
 }
@@ -18,7 +20,6 @@ body{
     flex-direction: column;
     gap: 15px;
     padding: 25px;
-    /* width: 100%; */
     border-radius: 15px;
 }
 .card1{
@@ -87,22 +88,20 @@ p{
 
 }
 
-@media (min-width:400px) {
+/* @media (max-width:500px) {
     
     body{
         padding: 15px 15px;
     }
     
     
-}
+} */
 
-@media (min-width:767px) {
+@media (min-width:767px)  {
     
-    body{
-        padding: 15px 100px;
-    }
+    
     .container{
-        
+        width: 80vw;
         grid-template-areas: 
     "card1 card1 card1 card2 card5"
     "card3 card4 card4 card4 card5";
