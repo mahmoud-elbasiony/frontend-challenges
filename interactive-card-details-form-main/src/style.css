@@ -45,45 +45,47 @@ body{
     display: flex;
     /* flex-direction: column; */
     flex-wrap: wrap;
-    width: 550px;
-    gap:30px;
+    width: 40%;
+    /* gap:30px; */
+    gap:clamp(5px,30px,40px)
 }
 .front,.back{
     color: white;
     margin-left: 10px;
-    max-width: 447px;
-    width: 40vw;
+    /* max-width: 80%; */
+    width: 80%;
     aspect-ratio: 16/8.78;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 10px;
 }
 .front{
-    padding: 15px 40px;
-    font-size: 22px;
+    padding:5%;
+    font-size: clamp(15px,1vw,22px);
     letter-spacing: 2px;
     display: flex;
     flex-wrap: wrap;
-    gap:50px;
+    gap:20%;
     background-image: url("images/bg-card-front.png");
 }
 .circles{
     display: flex;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 10%;
     align-content: center;
     align-items: center;
     width: 100%;
 }
 .white-circle{
-    width: 50px;
-    height: 50px;
+    width: 20%;
+    aspect-ratio: 1;
+    /* height: 5%; */
     border-radius: 50%;
     background-color: rgb(254, 254, 254);
 }
 .circle{
-    width: 25px;
-    height: 25px;
+    width: 10%;
+    aspect-ratio: 1;
     border-radius: 50%;
     background-color: rgba(254, 254, 254, 0);
     border:2px solid white;
@@ -101,6 +103,9 @@ body{
     justify-content: space-between;
 }
 .back{
+    /* font-size: 1vw; */
+    font-size: clamp(15px,1vw,22px);
+
     margin-left: auto;
     background-image: url("images/bg-card-back.png");
     position: relative;
@@ -109,7 +114,7 @@ body{
     position: absolute;
     right: 15%;
     color: white;
-    font-size: 18px;
+    /* font-size: 18px; */
     letter-spacing: 1px;
     top: 50%;
     transform: translatey(-50%);
@@ -118,6 +123,7 @@ body{
 .form{
     margin: 15px;
     /* max-width: 600px; */
+    
     display: flex;
     flex-direction: column;
 }
@@ -211,7 +217,7 @@ button:hover{
         max-width: 80vw;
     }
     .front,.back{
-        font-size: 15px;
+        /* font-size: 15px; */
         width: 300px;
         left:50%;
         position: absolute;
@@ -231,10 +237,10 @@ button:hover{
     
     }
 }
-@media (min-width:767px) and (max-width:900px) {
+/* @media (min-width:767px) and (max-width:900px) {
     .front{
         font-size: 18px;
     
     }
     
-}
+} */
