@@ -167,7 +167,7 @@ img {
 }
 img::selection,
 svg::selection{
-    user-select: none;
+    background: transparent;
 }
 
 
