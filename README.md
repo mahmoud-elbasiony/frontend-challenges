@@ -12,6 +12,6 @@
 
 ## Design preview for the Interactive card details form coding challenge
 * <a href="https://mahmoud-elbasiony.github.io/frontend-challenges/ecommerce-product-page-main/">ecommerce product page main</a>
-<img src="./interactive-card-details-form-main/design/desktop-preview.jpg" width="400"/>
+<img src="./ecommerce-product-page-main/design/active-states-basket-empty.jpg" width="400"/>
 
 
