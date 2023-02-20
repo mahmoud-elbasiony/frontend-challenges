@@ -191,7 +191,7 @@ AddToCart.addEventListener("click",function(){
 
 function addItemToCart(){
     let itemcount=document.querySelector(".count .itemcount").innerText
-    let cart=document.querySelector(".navigation .cart span")
+    let cart=document.querySelector(".navigation .cart p")
     if(parseInt(itemcount)>0){
         cart.style.display="block"
         
