@@ -121,7 +121,8 @@ body{
 #next,
 #prev,
 #fullscreenprev,
-#fullscreennext{
+#fullscreennext,
+#fullscreenclose{
     display: none;
     position: absolute;
     top: 50%;
@@ -143,7 +144,8 @@ body{
 #next:hover,
 #prev:hover,
 #fullscreenprev:hover,
-#fullscreennext:hover{
+#fullscreennext:hover,
+#fullscreenclose:hover{
     scale: 1.1;
 }
 .product .slider .full-image img,
@@ -327,6 +329,7 @@ body{
 }
 .product .slider-fullscreen{
     display: none;
+    max-width: 500px;
 }
 .product .fullscreen{
     display: flex;
@@ -337,14 +340,22 @@ body{
     z-index: 5;
 }
 #fullscreenprev,
-#fullscreennext{
+#fullscreennext,
+#fullscreenclose{
     display: block;
     top:40%;
     right: -10%;
     
+    
 }
 #fullscreenprev{
     left: -10%;
+}
+#fullscreenclose{
+    top:-5%;
+    right: -5%;
+
+
 }
 .product .slider-fullscreen .thumbnails img:hover{
     filter: opacity(1);

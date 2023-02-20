@@ -3,6 +3,7 @@ const next=document.getElementById("next")
 const prev=document.getElementById("prev")
 const fullScreennext=document.getElementById("fullscreennext")
 const fullScreenprev=document.getElementById("fullscreenprev")
+const fullScreenClose=document.getElementById("fullscreenclose")
 const overLay=document.querySelector(".overlay")
 let count=0;
 next.addEventListener("click",function(){
@@ -24,6 +25,12 @@ fullScreenprev.addEventListener("click",function(){
 overLay.addEventListener("click",function(e){
     
     overLay.style.display=document.querySelector(".burger-menu").style.display="none"
+    document.querySelector(".slider-fullscreen").classList.remove("fullscreen")
+
+})
+fullScreenClose.addEventListener("click",function(e){
+    
+    overLay.style.display="none"
     document.querySelector(".slider-fullscreen").classList.remove("fullscreen")
 
 })
