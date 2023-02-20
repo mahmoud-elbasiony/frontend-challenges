@@ -26,6 +26,7 @@ body{
     margin: 0 auto 50px;
 }
 .navigation{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,6 +54,7 @@ body{
     width: 100%;
     transition: .25s;
 }
+
 .navigation .burger-menu a:hover{
     border-bottom:1px solid var(--gray);
     background-color: white;
@@ -77,10 +79,30 @@ body{
     
 }
 
-
+.navigation .menu li{
+    /* background-color: aqua; */
+    padding: 1.1rem 0;
+    position: relative;
+    overflow: hidden;
+}
 .navigation .menu li a{
     color: var(--gray);
 }
+.navigation .menu li::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+
+}
+.navigation .menu li:hover::after{
+    background-color: var(--orange);
+
+
+}
+
 .navigation .menu li a:hover{
     color: var(--orange);
 }
@@ -89,12 +111,173 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.navigation .profile img{
-    
+.navigation .profile > img{
+    border-radius: 50%;
+    border: 2px solid transparent;
     margin-left: 2rem;
     width:40px;
     height: auto;
+    cursor: pointer;
 }
+
+.navigation .profile > img:hover{
+    border: 2px solid var(--orange);
+}
+.navigation .profile svg{
+    fill:#69707D;
+    cursor: pointer;
+}
+.navigation .profile svg:hover{
+    fill:#000;
+    
+
+}
+.navigation .cart{
+    position: relative;
+}
+.navigation .cart span{
+    display: none;
+    position: absolute;
+    right: -9px;
+    top: -9px;
+    width: 1rem;
+    height: 1rem;
+    /* padding: 2px; */
+    text-align: center;
+    padding-bottom: 2px;
+    border-radius: 50%;
+    background-color: red;
+    color: black;
+
+}
+.navigation .cartList{
+    display: none;
+    
+    position: absolute;
+    gap: 1.2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: center;
+    background-color: white;
+    border: 2px solid var(--orange);
+    border-radius: 15px;
+    min-width: 300px;
+    min-height: 220px;
+    top: 100%;
+    right: 0;
+    color: black;
+    z-index: 5;
+    padding: 15px 20px;
+}
+.navigation .cartList h3{
+    font-weight: 700;
+    border-bottom: 2px solid var(--gray);
+    padding: 10px;
+    color: #000;
+    width: 100%;
+}
+.navigation .cartList .items{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap:1rem;
+
+}
+.navigation .cartList .item{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap:1rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--gray);
+
+}
+.navigation .cartList .item :first-child{
+    width:100px;
+    border-radius: 10px;
+    height: auto;
+}
+.navigation .cartList .item :last-child{
+    width:30px;
+    height: auto;
+    cursor: pointer;
+
+}
+.navigation .cartList .item .desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: flex-start; */
+    /* align-content: ; */
+    height: 30px;
+    gap:20px;
+}
+.navigation .cartList .item .desc .name{
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.navigation .cartList .item .desc .price{
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--gray);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.navigation .cartList .item .delete{
+    color:#C3CAD9;
+    font-weight: bold;
+    text-align: center;
+    padding: 1px;
+    transition:1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.navigation .cartList .item .delete :hover{
+    color:#ff0000;
+}
+
+
+.navigation .cartList .item .desc .price .Itemtotal{
+    color: black;
+    /* justify-self: flex-end; */
+}
+
+.navigation .cartList >button{
+    flex: 1;
+    width: 100%;
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    padding: .8rem 1rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap:1rem;
+    justify-content: center;
+    border-radius: 10px;
+    flex: 2;
+    font-size: 15px;
+    min-width: 150px;
+    max-height: 40px;
+    
+}
+.navigation .cartList >button:hover{
+    background-color: rgb(255, 166, 0);
+}
+
 /* end header */
 
 /* start content */
@@ -247,7 +430,7 @@ body{
     /* max-width: 200px; */
 
 }
-.product .desc button{
+button{
     cursor: pointer;
     
 }
