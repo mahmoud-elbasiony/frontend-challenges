@@ -147,7 +147,7 @@ body{
     position: relative;
 }
 .navigation .profile .cart p{
-    /* display: none; */
+    display: none;
     position: absolute;
     font-size: .8rem;
     font-weight: 700;
