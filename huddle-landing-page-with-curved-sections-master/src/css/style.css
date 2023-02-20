@@ -1,0 +1,82 @@
+:root{
+    --pink:#ff52c1;
+    --dark:rgb(2, 37, 46);
+    --light-dark:rgb(19, 34, 38):
+    
+}
+body{
+    font-family: sans-serif;
+}
+
+/* start navigation */
+nav ul{
+    margin-top: 30px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul svg{
+    color: var(--pink);
+    font-size: .5em;
+}
+nav ul button{
+    color: var(--pink);
+    padding: .7em 1.5em;
+    background-color: white;
+    border: 2px solid var(--pink);
+    border-radius: 2em;
+    transition: .25s;
+}
+nav ul button:hover{
+    color: white;
+    background-color: var(--pink);
+    border: 2px solid white;
+}
+/* end navigation */
+/* start community */
+.community-container{
+    margin: 100px auto;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    justify-content:center;
+    align-items: center;
+    align-content: center;
+}
+.community-container > *{
+    text-align: center;
+}
+
+.community-container h2{
+    color: var(--dark);
+}
+.community-container p{
+    font-size: 1.3em;
+    color: var(--light-dark);
+    max-width: 600px;
+}
+.community-container button{
+    margin-top: 50px;
+    color: white;
+    padding: .7em 1.5em;
+    background-color: var(--pink);
+    border: 2px solid var(--pink);
+    border-radius: 2em;
+    transition: .25s;
+}
+.community-container button:hover{
+    color: var(--pink);
+    background-color: white;
+}
+.community-container svg{
+    margin-top: 0px;
+    /* scale: calc(90vw-900px); */
+    /* max-width: 80vw; */
+    /* scale: .3; */
+    transform: scale(.3,.3);
+    /* width: 100%; */
+    /* height: auto; */
+}
+
+/* end community */
