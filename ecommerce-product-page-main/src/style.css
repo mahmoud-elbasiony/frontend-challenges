@@ -113,7 +113,9 @@ body{
 .product .slider,
 .product .slider-fullscreen{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: wrap;
     gap: 1.5rem;
     /* min-width: 380px; */
     /* max-width: 500px; */
@@ -155,11 +157,18 @@ body{
     height: auto;
     border-radius: 5%;
     cursor: pointer;
-
+    flex: 1;
+}
+.product .slider .full-image{
+    width: 100%;
 }
 .product .thumbnails{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    flex: 1;
+    width :100%; 
     gap: 1.5rem;
+    justify-content: space-between;
 }
 
 .product .thumbnails img{
@@ -176,8 +185,7 @@ body{
 }
 
 .product .desc{
-    /* margin : 30px; */
-    /* max-width: 550px; */
+    flex: 1;
 }
 .product .desc h5{
     color: var(--orange);
