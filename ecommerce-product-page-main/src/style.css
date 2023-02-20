@@ -38,6 +38,7 @@ body{
 
 }
 .navigation .burger-menu{
+
     display: none;
     position: absolute;
     flex-direction: column;
@@ -47,16 +48,26 @@ body{
     top: 100%;
     color: white;
     z-index: 5;
+    border-radius: 15px;
+    overflow: hidden;
+    border:2px solid white;
+
 }
 .navigation .burger-menu a{
     background-color: var(--orange);
     padding: 10px 30px;
     width: 100%;
     transition: .25s;
+    border-bottom:2px solid white;
+
+}
+.navigation .burger-menu a:last-of-type{
+    border-bottom:none;
+
+
 }
 
 .navigation .burger-menu a:hover{
-    border-bottom:1px solid var(--gray);
     background-color: white;
     color: var(--orange);
 }
